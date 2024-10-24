@@ -1,0 +1,59 @@
+.assets-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--appbar-height));
+  overflow: hidden;
+}
+
+.assets-toolbar {
+  flex-shrink: 0;
+}
+
+.assets-title {
+  flex-grow: 1;
+}
+
+.assets-content {
+  flex-grow: 1;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.assets-grid-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.assets-header,
+.assets-footer {
+  padding-left: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.change-status {
+  font-size: 14px;
+  color: #666;
+}
+
+.change-status.has-changes {
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+.assets-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+  position: relative;
+}
