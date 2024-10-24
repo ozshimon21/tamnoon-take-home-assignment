@@ -90,6 +90,6 @@ This builds the app for production to the `build` folder. It correctly bundles R
 
 ## Contact
 
-If you have any questions or need further clarification, please contact [Oz Shimon] at [ozshimon21@gmail.com].
+If you have any questions or need further clarification, please contact me at [ozshimon21@gmail.com](ozshimon21@gmail.com).
 
 Thank you for reviewing this project!
