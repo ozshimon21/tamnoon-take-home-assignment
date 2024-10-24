@@ -29,7 +29,7 @@ const mockData = [
       },
     },
   },
-];
+] as Asset[];
 
 // Mock the external dependencies
 vi.mock("../services/assets.service");
