@@ -1,3 +1,7 @@
+<p align="center">
+   <a href="http://nestjs.com/" target="blank"><img src="https://github.com/user-attachments/assets/573f1a2b-9f5f-4f30-b516-faeb446dd9c4" width="200" alt="Tamnoon.io Logo" /></a>
+</p>
+
 # Tamnoon Take-Home Assignment
 
 This project is a React-based web application that displays and allows the editing of asset data.
@@ -85,7 +89,8 @@ This builds the app for production to the `build` folder. It correctly bundles R
 
 ## Notes
 
-- The application fetches data from the provided GitHub repository: https://github.com/tamnoon-io/webinterviews, from this api URL: https://raw.githubusercontent.com/tamnoon-io/webinterviews/refs/heads/main/assets.json
+- The application fetches data from the provided GitHub repository: https://github.com/tamnoon-io/webinterviews.
+- API endpoint: https://raw.githubusercontent.com/tamnoon-io/webinterviews/refs/heads/main/assets.json
 - No modifications were made to the original JSON file as per the instructions
 
 ## Contact
