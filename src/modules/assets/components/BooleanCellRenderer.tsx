@@ -1,4 +1,4 @@
-import { MenuItem, Select } from "@mui/material";
+import { MenuItem, Select, SelectChangeEvent } from "@mui/material";
 import { IRowNode } from "ag-grid-community";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ interface Props {
 function BooleanCellRenderer({ value, editMode, onChange, node }: Props) {
   const [cellValue, setCellValue] = useState(value);
 
-  const onValueChangeHandler = (event) => {
+  const onValueChangeHandler = (event: SelectChangeEvent<number>) => {
     const eventValue = event.target.value ? true : false;
     onChange(node, eventValue);
     setCellValue(eventValue);

@@ -2,14 +2,14 @@ import { AgGridReact } from "ag-grid-react"; // React Data Grid Component
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the Data Grid
 import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied to the Data Grid
 import { Asset } from "../models";
-import { ColDef, IRowNode } from "ag-grid-community";
+import { ColDef, IRowNode, ValueFormatterParams } from "ag-grid-community";
 import BooleanCellRenderer from "./BooleanCellRenderer";
 import "./AssetsGrid.css";
 
 const DEFAULT_COL_DEF = {
   filter: true,
   width: 250,
-  valueFormatter: (params) => {
+  valueFormatter: (params: ValueFormatterParams) => {
     return params.value === null || params.value === undefined
       ? "N/A"
       : params.value;
