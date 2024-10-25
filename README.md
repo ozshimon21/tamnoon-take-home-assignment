@@ -55,10 +55,6 @@ This will launch the test runner in interactive watch mode.
 
 This will open dev server under the hood when running the tests. Open [http://localhost:51204/**vitest**/](http://localhost:51204/__vitest__/) to view the Vitest UI.
 
-To run the tests, use the following command:
-interactive mode: `npm run test`
-with UI: `npm run test:UI`
-
 ## Building for Production
 
 To build the app for production, use:
