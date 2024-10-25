@@ -51,7 +51,7 @@ This will start the development server. Open [http://localhost:4200](http://loca
 
 This will launch the test runner in interactive watch mode.
 
-`npm run test:UI`
+`npm run test:ui`
 
 This will open dev server under the hood when running the tests. Open [http://localhost:51204/**vitest**/](http://localhost:51204/__vitest__/) to view the Vitest UI.
 
