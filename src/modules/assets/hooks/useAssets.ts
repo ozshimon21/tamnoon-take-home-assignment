@@ -1,5 +1,3 @@
-// src/hooks/useAssets.ts
-
 import { useState, useEffect } from "react";
 import { Asset } from "../models/Asset";
 import { getAssets } from "../services/assets.service";

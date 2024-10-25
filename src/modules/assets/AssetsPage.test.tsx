@@ -5,36 +5,36 @@ import { useAssets } from "./hooks/useAssets";
 import { useToastContext } from "../../shared/hooks/useToastContext";
 import { Asset } from "./models";
 
-const mockAssets = [
-  {
-    _id: "1",
-    enriched: {
-      isCrownJewel: false,
-    },
-    assetName: "asset1",
-    owner: {
-      name: "owner1",
-    },
-  },
-  {
-    _id: "2",
-    enriched: {
-      isCrownJewel: true,
-    },
-    assetName: "asset2",
-    owner: {
-      owner: {
-        name: "owner2",
-      },
-    },
-  },
-] as Asset[];
-
 // Mock the hooks
 vi.mock("./hooks/useAssets");
 vi.mock("../../shared/hooks/useToastContext");
 
 describe("AssetsPage", () => {
+  const mockAssets: Asset[] = [
+    {
+      _id: "1",
+      enriched: {
+        isCrownJewel: false,
+      },
+      assetName: "asset1",
+      owner: {
+        name: "owner1",
+      },
+    },
+    {
+      _id: "2",
+      enriched: {
+        isCrownJewel: true,
+      },
+      assetName: "asset2",
+      owner: {
+        owner: {
+          name: "owner2",
+        },
+      },
+    },
+  ];
+
   const mockUpdateAsset = vi.fn();
   const mockSaveChanges = vi.fn();
   const mockShowToast = vi.fn();
