@@ -63,8 +63,6 @@ To build the app for production, use:
 
 This builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Project Structure
-
 ## Features
 
 1. Display assets in a table format.
