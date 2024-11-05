@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Asset } from "../models/Asset";
 import { getAssets } from "../services/assets.service";
 
+const ASSETS_LOCAL_STORAGE_KEY = "assets";
+
 export function useAssets() {
   const [assets, setAssets] = useState<Asset[]>([]);
   const [pendingChanges, setPendingChanges] = useState<Asset[]>([]);
@@ -12,7 +14,7 @@ export function useAssets() {
 
   const fetchAssets = async () => {
     // First try to get assets from local storage
-    const savedAssets = localStorage.getItem("assets");
+    const savedAssets = localStorage.getItem(ASSETS_LOCAL_STORAGE_KEY);
     if (savedAssets) {
       const parsedAssets = JSON.parse(savedAssets);
       setAssets(parsedAssets);
@@ -26,7 +28,7 @@ export function useAssets() {
 
   const updateAsset = (asset: Asset) => {
     setPendingChanges((prev) => {
-      // Note: if we want to do more rubush comparision we can compare objects
+      // Note: if we want to do more rubust comparision we can compare objects
       // but here we just change one field(Yes, No) so it easy to track the changes.
       const isPendingChangeExist =
         prev.findIndex((item) => item._id === asset._id) != -1;
@@ -52,7 +54,10 @@ export function useAssets() {
     });
 
     setAssets(updatedAssets);
-    localStorage.setItem("assets", JSON.stringify(updatedAssets));
+    localStorage.setItem(
+      ASSETS_LOCAL_STORAGE_KEY,
+      JSON.stringify(updatedAssets)
+    );
     setPendingChanges([]);
   };
 
